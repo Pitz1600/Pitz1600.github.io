@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: serif;
+    font-size: 20px;
+  }
+
+  .navbar {
+    overflow: hidden;
+    /* background-color: black; */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    position: relative;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center; 
+    padding: 14px 20px; 
+    text-decoration: none;
+    transition: .5s;
+  }
+  
+  .navbar a.last {
+    float: right;
+  }
+  
+  .navbar a:hover {
+    background-color: lightgray; 
+    color: darkblue;
+    font-weight: bold;
+  }
+
+  .header {
+    padding: 5%;
+    text-align: center;
+    background-image: linear-gradient(to right, pink , blue); /* my header background color */
+    color: black;
+  }
+  .header h1 {
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+  }
+  .header p b {
+    font-size: 50px;
+  }
+
+  .profilediv {
+    align-items: center;
+    margin: auto;
+    /* background-color: yellow; */
+  }
+  .profilepic {
+    width:200px;
+    height:200px;
+    border-radius: 30%;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, pink , blue);
+  }
+  .row #level, #pos {
+    background-color: skyblue;
+    font-size:x-large;
+  }
+  .row li p:hover {
+    font-size: 110%;
+  }
+  .row #school, #work {
+    font-weight: bolder;
+    font-size: 110%;
+  }
+  .row #address {
+    font-style: italic;
+  }
+  
+  .side, .main {
+    flex: 50%; 
+    /* background-color: pink; my background color */
+    padding: 20px; 
+    color: black;
+    text-align: justify;
+  }
+  .side-2, .main-2 {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10%;
+  }
+
+  @media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  .footer {
+    padding: 20px;
+    text-align: center; 
+    background-color: 2c3e50; /* my footer background color */
+  }
+  .footer #instagram {
+    color: E1306C;
+  }
+  .footer #github {
+    color: gray;
+  }
+  .footer a {
+    font-size: 150%;
+    transition: .5s;
+  }
+  .footer a:hover {
+    font-size: 200%;
+  }
+  .footer p {
+    color: lightgray;
+    font-size: 80%;
+  }
