@@ -14,24 +14,25 @@
     overflow: hidden;
     /* background-color: black; */
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    position: relative;
   }
   
   .navbar a {
     float: left;
-    display: block;
     color: black;
     text-align: center; 
-    padding: 14px 20px; 
+    padding: 14px 16px; 
     text-decoration: none;
     transition: .5s;
   }
-  
-  .navbar a.last {
+  .navbar h1 {
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+  }
+  .navmenu {
     float: right;
+    padding: 11px;
   }
   
-  .navbar a:hover {
+  .navmenu a:hover {
     background-color: lightgray; 
     color: darkblue;
     font-weight: bold;
@@ -42,9 +43,6 @@
     text-align: center;
     background-image: linear-gradient(to right, pink , blue); /* my header background color */
     color: black;
-  }
-  .header h1 {
-    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
   }
   .header p b {
     font-size: 50px;
@@ -90,20 +88,36 @@
     text-align: justify;
   }
   .side-2, .main-2 {
-    padding: 20px;
+    padding: 50px;
     background: rgba(255, 255, 255, 0.3);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10%;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1000px) {
     .row {
       flex-direction: column;
     }
+    .side-2, .main-2 {
+      padding: 20px;
+    }
   }
-  @media screen and (max-width: 530px) {
+  @media screen and (max-width: 930px) {
+    .navbar h1 {
+      width: 100%;
+    }
+    .navmenu {
+      width: 100%;
+      text-align: center;
+    }
     .navbar a {
       float: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .navbar a {
       width: 100%;
+      display: block;
     }
   }
   
