@@ -43,7 +43,6 @@ section {
   float: right;
   padding: 11px;
 }
-
 .navmenu a:hover {
   background-color: lightgray; 
   color: darkblue;
@@ -61,9 +60,6 @@ section {
   color: black;
   display: flex;
   flex-wrap: wrap;
-}
-.profile img {
-  margin: 20px;
 }
 .profile h1 {
   font-size: 80px;
@@ -87,6 +83,11 @@ section {
   height: 300px;
   border-radius: 30%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  transition: 0.8s;
+}
+.profilepic:hover {
+  transform: scale(1.2);
 }
 .profiletext {
   flex: 60%;
@@ -116,6 +117,10 @@ section {
   height: 400px;
   border-radius: 30%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
+}
+.formalpic:hover {
+  transform: scale(1.2);
 }
 .introtext {
   flex: 60%;
@@ -225,7 +230,7 @@ section {
 }
 
 @media screen and (max-width: 660px) {
-  .navbar h1 {
+  .logoicon {
     width: 100%;
   }
   .navmenu {
@@ -239,7 +244,7 @@ section {
     text-align: center;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .navbar a {
     width: 100%;
     display: block;
