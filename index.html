@@ -9,24 +9,35 @@
 </head>
 <body>
 
-<header class="navbar">
-    <a class="logoicon" href="#"><img src="assets/icons/Logo-icon.png" alt="Logo Banner"></a>
-    <div class="navmenu">
-        <a href="#Profile">Home</a>
-        <a href="#Introduction">Introduction</a>
-        <a href="#Services">Services</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Contacts" class="last">Contacts</a>
+<nav class="navbar">
+    <div class="logo-title">
+        <a href="#"><img class="logobanner" src="assets/icons/Logo-banner.png" alt="Logo Banner"></a>
     </div>
-</header>
+    <img class="menubtn" src="assets/icons/menu.png">
+    <div class="navmenu">
+        <ul>
+            <li><a href="#Profile">Home</a></li>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contacts">Contacts</a></li>
+        </ul>
+    </div>
+    <script>
+        const menubutton = document.getElementsByClassName('menubtn')[0]
+        const navigatemenu = document.getElementsByClassName('navmenu')[0]
+        menubutton.addEventListener('click', () => {
+        navigatemenu.classList.toggle('active')
+    })
+    </script>
+</nav>
 
 <section class="profile" id="Profile">
     <div class="profiletext">
-        <p>&nbsp;</p>
         <h1>Hi! I'm <b class="headtitle">PETER</b>!</h1>
         <h2>(Pitz)</h2>
         <p>&nbsp;</p>
-        <p class="indented">It’s <span class="headtitle">Peter Pagasartonga</span>, a 23-year-old student and studies IT as a Sophomore at PHINMA University of Pangasinan.
+        <p class="indented">It’s <span class="headtitle">Peter R. Pagasartonga</span>, a 23-year-old student and studies IT as a Sophomore at PHINMA University of Pangasinan.
         </p>
         <p>&nbsp;</p>
         <p class="indented">I've looked for opportunities to use and hone my talents through practical projects and work experiences throughout my academic career.
@@ -101,18 +112,20 @@
     <h2>More <span class="headtitle">projects</span> coming soon...</h2>
 </section>
 
-<section class="footer" id="Contacts">
+<footer class="footer" id="Contacts">
+    <p id="navtitles">Contacts</p>
     <a id="fb" href="https://www.facebook.com/pitz16" class="fa fa-facebook"></a>
     &nbsp;
     <a id="instagram" href="https://www.instagram.com/pitz1600/" class="fa fa-instagram"></a>
     &nbsp;
-    <a id="github" href="https://github.com/PeterPan1600"><i class="fa fa-github"></i></a>
+    <a id="github" href="https://github.com/Pitz1600"><i class="fa fa-github"></i></a>
     &nbsp;
     <a id="telegram" href="https://t.me/Peter8816"><i class="fa fa-telegram"></i></a>
     &nbsp;
     <a href="https://peterrp.carrd.co/" class="more">View More</a>
     <p>&nbsp;</p>
+    <p>&nbsp;</p>
     <p>Copyright © September 2024 Peter Pagasartonga. All rights reserved.</p>
-</section>
+</footer>
 </body>
 </html>

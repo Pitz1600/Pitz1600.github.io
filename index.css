@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -12,41 +13,89 @@ body {
 }
 
 section {
-  padding: 5%;
+  padding: 80px;
 }
 .indented {
   text-indent: 50px;
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
   overflow: hidden;
   /* background-color: black; */
   box-shadow: 5px 5px 5px 0 rgba(0,0,0,.2);
-  background-color: white;
+  background-color: gray;
 }
 
-.navbar a {
-  float: left;
-  color: black;
-  text-align: center; 
-  padding: 14px 16px; 
+.logo-title {
+  height: 80px;
+}
+.logobanner {
+  height: 80px;
+}
+
+.navmenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navmenu li {
+  list-style: none;
+}
+.navmenu li a {
   text-decoration: none;
-  transition: .5s;
+  color: black;
+  padding: 16px;
+  display: block;
 }
-.navbar h1 {
-  text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-}
-.navmenu {
-  float: right;
-  padding: 11px;
-}
-.navmenu a:hover {
+.navmenu li:hover, .menubtn:hover {
   background-color: lightgray; 
   color: darkblue;
   font-weight: bold;
+  transition: .8s;
+}
+.menubtn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 780px) {
+  .menubtn {
+    display: flex;
+  }
+  .navmenu {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navmenu ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navmenu li {
+    text-align: center;
+  }
+  .navmenu li a {
+    padding: 8px 16px;
+  }
+  .navmenu.active {
+    display: flex;
+  }
 }
 
 #navtitles {
@@ -54,6 +103,7 @@ section {
   font-size: 30px;
   text-align: left;
   width: 100%;
+  padding: 20px;
 }
 
 .profile {
@@ -115,6 +165,7 @@ section {
 .formalpic {
   width: 400px;
   height: 400px;
+  margin: auto;
   border-radius: 30%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   transition: 0.8s;
@@ -126,6 +177,16 @@ section {
   flex: 60%;
   text-align: justify;
   font-size: 120%;
+}
+
+@media screen and (max-width: 550px) {
+  .intropic {
+    width: 80%;
+  }
+  .formalpic {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .services-box {
@@ -229,31 +290,9 @@ section {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 660px) {
-  .logoicon {
-    width: 100%;
-  }
-  .navmenu {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar a {
-    float: none;
-  }
-  .profilediv h1 {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 550px) {
-  .navbar a {
-    width: 100%;
-    display: block;
-  }
-}
-
 .footer {
-  padding: 20px;
-  text-align: center; 
+  text-align: center;
+  padding: 50px;
   background-color: 2c3e50; /* my footer background color */
 }
 .footer #instagram {
