@@ -19,6 +19,16 @@ section {
   text-indent: 50px;
 }
 
+@media screen and (max-width: 500px) {
+  section {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .profilepic, .formalpic {
+    width: 100px;
+    height: 100px;
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -78,10 +88,12 @@ section {
   .navmenu {
     display: none;
     width: 100%;
+    transition: 3s ease-out;
   }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    transition: height 4s ease-in-out;
   }
   .navmenu ul {
     width: 100%;
@@ -95,6 +107,9 @@ section {
   }
   .navmenu.active {
     display: flex;
+  }
+  .navmenu.inactive {
+    display: none;
   }
 }
 

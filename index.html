@@ -28,7 +28,12 @@
         const navigatemenu = document.getElementsByClassName('navmenu')[0]
         menubutton.addEventListener('click', () => {
         navigatemenu.classList.toggle('active')
-    })
+        })
+        window.onclick = function(event){
+            if(!event.target.matches(".menubtn")){
+                navigatemenu.classList.toggle('active')
+            }
+        }
     </script>
 </nav>
 
@@ -37,8 +42,6 @@
         <h1>Hi! I'm <b class="headtitle">PETER</b>!</h1>
         <h2>(Pitz)</h2>
         <p>&nbsp;</p>
-        <p class="indented">It’s <span class="headtitle">Peter R. Pagasartonga</span>, a 23-year-old student and studies IT as a Sophomore at PHINMA University of Pangasinan.
-        </p>
         <p>&nbsp;</p>
         <p class="indented">I've looked for opportunities to use and hone my talents through practical projects and work experiences throughout my academic career.
             I think that gaining practical experience is essential for career advancement.
@@ -57,16 +60,17 @@
     </div>
     <div class="introtext">
         <p>&nbsp;</p>
-        <p class="indented">Hello there! As an IT student, this individual embodies a responsible attitude and a strong work ethic that sets them apart from their peers.
-            Their commitment to their work is unwavering, as they consistently put in the extra time and effort required to learn the complex concepts and technical skills needed to advance in the field of choice.
+        <p class="indented">Hello there! It’s <span class="headtitle">Peter R. Pagasartonga</span>! As an IT student, this individual embodies a responsible attitude and a strong work ethic that sets him apart from his peers.
+            His commitment to his work is unwavering, as he consistently put in the extra time and effort required to learn the complex concepts and technical skills needed to advance in his field of choice.
             </p>
         <p>&nbsp;</p>
-        <p class="indented">This student understands that IT is a dynamic, ever-evolving industry, and they embrace the challenge of continually expanding their knowledge and capabilities.
-            Their responsible nature extends beyond the classroom or fieldwork as well - they are reliable, accountable, and able to balance their work with other important aspects of their life.
+        <p class="indented">This student understands that IT is a dynamic, ever-evolving industry, and he embraces the challenge of continually expanding his knowledge and capabilities.
+            His responsible nature extends beyond the classroom or fieldwork as well - he is reliable, accountable, and able to balance his work with other important aspects of his life.
             </p>
         <p>&nbsp;</p>
-        <p class="indented">Professors and employers alike are sure to take notice of this individual's responsible attitude and strong work ethic, qualities that will undoubtedly serve them well throughout their academic and professional journeys.</p>
+        <p class="indented">Professors and employers alike are sure to take notice of this individual's responsible attitude and strong work ethic, qualities that will undoubtedly serve him well throughout his academic and professional journey.</p>
     </div>
+
 </section>
 
 <section class="services" id="Services">
