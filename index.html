@@ -28,10 +28,11 @@
         const navigatemenu = document.getElementsByClassName('navmenu')[0]
         menubutton.addEventListener('click', () => {
         navigatemenu.classList.toggle('active')
+        navigatemenu.classList.replace('inactive', 'active')
         })
         window.onclick = function(event){
             if(!event.target.matches(".menubtn")){
-                navigatemenu.classList.toggle('active')
+                navigatemenu.classList.replace('active', 'inactive')
             }
         }
     </script>
