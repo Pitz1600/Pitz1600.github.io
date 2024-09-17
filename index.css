@@ -9,7 +9,6 @@ html {
 body {
   font-family: serif;
   font-size: 20px;
-  /* background-image: linear-gradient(to right, white , blue); */
 }
 
 section {
@@ -19,6 +18,7 @@ section {
   text-indent: 50px;
 }
 
+/* responsive design to accomodate mobile */
 @media screen and (max-width: 500px) {
   section {
     padding: 20px;
@@ -29,6 +29,7 @@ section {
     height: 100px;
   }
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -37,7 +38,6 @@ section {
   top: 0;
   z-index: 100;
   overflow: hidden;
-  /* background-color: black; */
   box-shadow: 5px 5px 5px 0 rgba(0,0,0,.2);
   background-color: gray;
 }
@@ -81,6 +81,7 @@ section {
   height: 50px;
 }
 
+/* responsive design for navigation bar */
 @media screen and (max-width: 780px) {
   .menubtn {
     display: flex;
@@ -209,15 +210,15 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 20px;
 }
 .services-box .services-content {
-  flex: 1 1 30rem;
+  flex: 1 1 480px;
   background: skyblue;
-  padding: 3rem 2rem 4rem;
-  border-radius: 2rem;
+  padding: 48px 32px 64px;
+  border-radius: 32px;
   text-align: center;
-  border: .2rem solid var(--bg-color);
+  border: 3px solid white;
   transition: .5s ease;
 }
 .services-box .services-content:hover {
@@ -226,15 +227,15 @@ section {
   transform: scale(1.05);
 }
 .services-content i {
-  font-size: 5rem;
+  font-size: 80px;
   color: black;
 }
 .services-content h3 {
-  font-size: 2rem;
+  font-size: 32px;
 }
 .services-content p {
-  font-size: 1.3rem;
-  margin: 1rem 0 3rem;
+  font-size: 20px;
+  margin: 16px 0 48px;
 }
 .icons {
   width: 50px;
@@ -245,18 +246,18 @@ section {
 .projects {
   background-image: linear-gradient(to left, lightgray 1% , white);
 }
-.projects h2 {
+.projects h3 {
   text-align: center;
   margin: 20px;
 }
-.portfolio-box {
-  width: 100%;
+.project-box {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 40px;
 }
-.portfolio-content {
+.project-content {
   width: 300px;
   position: relative;
   border-radius: 30px;
@@ -264,45 +265,51 @@ section {
   overflow: hidden;
   display: flex;
 }
-.portfolio-content:hover img {
+.project-content:hover img {
   transform: scale(1.2);
 }
-.portfolio-box img {
+.project-box img {
   width: 100%;
   display: block;
   margin: auto;
   transition: 0.8s;
 }
-.portfolio-text {
+.project-text {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  padding: 20% 10%;
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
   flex-direction: column;
   opacity: 0;
-  transition: 0.8s;
+  transition: 0.8s ease;
 }
-.portfolio-text:hover {
+.project-text:hover {
   opacity: 1;
 }
-.portfolio-text h2 {
+.project-text h2 {
   color: skyblue;
   margin-bottom: 10px;
 }
-.portfolio-text p {
+.project-text p {
   text-align: center;
   color: white;
 }
-.portfolio-text > *{
-  transform: translateY(25px);
+.project-text {
+  transform: translateY(1px);
   transition: 0.8s;  
 }
-.portfolio-text:hover > *{
+.project-text:hover {
   transform: translateY(0);
+}
+@media screen and (max-width: 800px) {
+  .project-box {
+    flex-direction: column;
+  }
 }
 
 .footer {
@@ -311,13 +318,13 @@ section {
   background-color: 2c3e50; /* my footer background color */
 }
 .footer #instagram {
-  color: E1306C;
+  color: #E1306C; /* default color instagram */
 }
 .footer #github {
   color: gray;
 }
 .footer #telegram {
-  color: #0088cc;
+  color: #0088cc;  /* default color telegram */
 }
 .footer a {
   font-size: 20px;
@@ -333,15 +340,14 @@ section {
 }
 .more {
   display: inline-block;
-  padding: .5rem 1rem;
-  background: #2c2c2c;
-  border-radius: 4rem;
-  font-size: 1.6rem;
-  color: #e2dfd8;
-  letter-spacing: .1rem;
+  padding: 8px 16px;
+  background: black;
+  border-radius: 64px;
+  color: lightgray;
+  letter-spacing: 2px;
   font-weight: 600;
   font-size: 10px;
 }
 .more:hover {
-  box-shadow: 0 0 1rem #e2dfd8;    
+  box-shadow: 0 0 16px lightgray;    
 }
