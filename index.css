@@ -6,7 +6,7 @@
 :root {
   --main-text: #1d3557;
   --secondary-text: #a8dadc;
-  --title-text: darkgray;
+  --title-text: blue;
   --default-text: black;
   --bg-color: lightgray;
   --second-bg-color: #457b9d;
@@ -34,7 +34,7 @@ section {
 /* responsive design to accomodate mobile */
 @media screen and (max-width: 860px) {
   section {
-    padding: 20px;
+    padding: 30px;
   }
   .profilepic, .formalpic {
     width: 100px;
@@ -151,7 +151,7 @@ section {
   text-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 .headtitle {
-  color: var(--main-text);
+  color: var(--title-text);
 }
 .maintitle {
   text-align: center;
@@ -238,6 +238,7 @@ section {
   background: var(--secondary-text);
   padding: 48px 32px 64px;
   border-radius: 32px;
+  border-width: 2px;
   text-align: center;
   transition: .5s ease;
 }
