@@ -10,7 +10,7 @@
   --default-text: black;
   --bg-color: lightgray;
   --second-bg-color: #457b9d;
-  --footer-bg: #2c3e50;
+  --footer-bg: #1d3557;
   --instagram-icon: #E1306C;
   --github-icon: gray;
   --telegram-icon: #0088cc;
@@ -217,9 +217,9 @@ section {
   .intropic {
     width: 80%;
   }
-  .formalpic {
-    width: 300px;
-    height: 300px;
+  .profilepic, .formalpic {
+    width: 50vw;
+    height: fit-content;
   }
 }
 
@@ -347,37 +347,29 @@ section {
   width: 100%;
   padding: 20px;
 }
-.footer #instagram {
-  color: var(--instagram-icon);
-}
-.footer #github {
-  color: var(--github-icon);
-}
-.footer #telegram {
-  color: var(--telegram-icon);
-}
-.footer a {
-  font-size: 20px;
+.footer-icons img {
+  width: 24px;
   transition: .5s;
   text-decoration: none;
 }
-.footer a:hover:not(.more) {
-  font-size: 200%;
-}
-.footer p {
-  color: var(--bg-color);
-  font-size: 80%;
+.footer-icons img:hover {
+  width: 48px;
 }
 .more {
   display: inline-block;
+  text-decoration: none;
   padding: 8px 16px;
   background: var(--default-text);
   border-radius: 64px;
   color: var(--bg-color);
   letter-spacing: 2px;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 16px;
 }
 .more:hover {
   box-shadow: 0 0 16px var(--bg-color);    
+}
+.footer p {
+  color: var(--bg-color);
+  font-size: 16px;
 }
