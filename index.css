@@ -9,12 +9,9 @@
   --secondary-text: #a8dadc;
   --title-text: blue;
   --default-text: black;
+  --default-color: white;
   --bg-color: lightgray;
   --second-bg-color: #457b9d;
-  --footer-bg: #1d3557;
-  --instagram-icon: #E1306C;
-  --github-icon: gray;
-  --telegram-icon: #0088cc;
   --open-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -104,7 +101,12 @@ nav {
 .navmenu li:hover,
 .menubtn:hover {
   background-color: var(--second-bg-color);
-  transition: .8s;
+  transition: 0.3s ease-in;
+
+  a {
+    color: var(--default-color);
+    transition: 0.3s ease-in;
+  }
 }
 
 .menubtn {
@@ -128,13 +130,11 @@ nav {
   .navmenu {
     display: none;
     width: 100%;
-    transition: 3s ease-out;
   }
 
   nav {
     flex-direction: column;
     align-items: flex-start;
-    transition: height 4s ease-in-out;
   }
 
   .navmenu ul {
@@ -176,7 +176,7 @@ header {
   color: var(--default-text);
   display: flex;
   flex-wrap: wrap;
-  background-image: linear-gradient(to left, var(--second-bg-color), white);
+  background-image: linear-gradient(to left, var(--second-bg-color), var(--default-color));
 }
 
 header h1 {
@@ -202,7 +202,7 @@ header h2 {
 
 .profilepic {
   width: 300px;
-  height: 300px;
+  height: fit-content;
   border-radius: 30%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin: 20px;
@@ -227,7 +227,7 @@ header h2 {
 }
 
 .intro {
-  background-image: linear-gradient(to right, var(--bg-color) 1%, white);
+  background-image: linear-gradient(to right, var(--bg-color) 1%, var(--default-color));
   display: flex;
   flex-wrap: wrap;
 }
@@ -241,7 +241,7 @@ header h2 {
 
 .formalpic {
   width: 400px;
-  height: 400px;
+  height: fit-content;
   margin: auto;
   border-radius: 30%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -271,7 +271,7 @@ header h2 {
 }
 
 .skills {
-  background-image: linear-gradient(to top, var(--second-bg-color), white);
+  background-image: linear-gradient(to top, var(--second-bg-color), var(--default-color));
 }
 
 .skills-box {
@@ -279,26 +279,29 @@ header h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px 20px;
+}
+
+.skills-content h4 {
+  margin-bottom: 16px;
 }
 
 .skills-box .skills-content {
-  flex: 1 1 350px;
+  flex: 0 1 360px;
   background: var(--secondary-text);
-  padding: 40px;
+  padding: 30px;
   border-radius: 32px;
-  border-width: 2px;
   text-align: center;
   transition: .5s ease;
 }
 
 .skills-box .skills-content:hover {
   border-color: var(--default-text);
-  border-style: solid;
   transform: scale(1.05);
+  box-shadow: 0 0 16px var(--main-text);
 
   .percent-bar p {
-    color: var(--secondary-text);
+    color: var(--default-color);
     transform: translate(0);
   }
 }
@@ -318,16 +321,17 @@ header h2 {
   text-align: right;
   font-size: 20px;
   border-radius: 50px;
+  overflow: hidden;
 }
 
 .percent-bar p {
   padding-right: 10px;
-  transform: translate(-20px);
-  transition: .5s ease;
+  transform: translate(-100%);
+  transition: 1s ease-in;
 }
 
 .services {
-  background-image: linear-gradient(to top, var(--second-bg-color), white);
+  background-image: linear-gradient(to top, var(--second-bg-color), var(--default-color));
 }
 
 .services-box {
@@ -339,19 +343,18 @@ header h2 {
 }
 
 .services-box .services-content {
-  flex: 1 1 480px;
+  flex: 0 1 550px;
   background: var(--secondary-text);
-  padding: 48px 32px 64px;
+  padding: 32px;
   border-radius: 32px;
-  border-width: 2px;
   text-align: center;
-  transition: .5s ease;
+  transition: 0.5s;
 }
 
 .services-box .services-content:hover {
   border-color: var(--default-text);
-  border-style: solid;
   transform: scale(1.05);
+  box-shadow: 0 0 16px var(--main-text);
 }
 
 .services-content i {
@@ -375,7 +378,7 @@ header h2 {
 }
 
 .projects {
-  background-image: linear-gradient(to top, var(--bg-color) 50%, white);
+  background-image: linear-gradient(to top, var(--bg-color) 50%, var(--default-color));
 }
 
 .projects h3 {
@@ -388,7 +391,8 @@ header h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .project-content {
@@ -408,7 +412,7 @@ header h2 {
   width: 100%;
   display: block;
   margin: auto;
-  transition: 0.8s;
+  transition: 0.8s ease-in;
 }
 
 .project-text {
@@ -417,13 +421,13 @@ header h2 {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20% 10%;
+  padding: 20% 1%;
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   flex-direction: column;
   opacity: 0;
-  transition: 0.8s ease;
+  transition: 3s ease-in;
 }
 
 .project-text:hover {
@@ -437,27 +441,26 @@ header h2 {
 
 .project-text p {
   text-align: center;
-  color: white;
+  color: var(--default-color);
 }
 
-.project-text {
-  transform: translateY(1px);
-  transition: 0.8s;
+.project-text,
+.project-text h2,
+.project-text p {
+  transition: 1s;
 }
 
 .project-text:hover {
-  transform: translateY(0);
-}
 
-@media screen and (max-width: 800px) {
-  .project-box {
-    flex-direction: column;
+  h2,
+  p {
+    transform: scale(0.9);
   }
 }
 
 .footer {
   text-align: center;
-  background-color: var(--footer-bg);
+  background-color: var(--main-text);
 }
 
 .footer h6 {
@@ -472,8 +475,9 @@ header h2 {
 
 .footer-icons img {
   width: 24px;
-  transition: .5s;
+  transition: 0.5s;
   text-decoration: none;
+  border-radius: 50%;
 }
 
 .footer-icons img:hover {
