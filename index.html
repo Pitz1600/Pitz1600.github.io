@@ -1,197 +1,214 @@
 <html>
-    <head>
-        <title>Peter's Portfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="assets/icons/Logo-icon.png">
-        <link rel="stylesheet" href="index.css">
-    </head>
+
+<head>
+    <title>Peter's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/icons/Logo-icon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+
 <body>
-
-<nav>
-    <div class="logo-title">
-        <a href="https://pitz1600.github.io/"><img class="logobanner" src="assets/icons/Logo-banner.png" alt="Logo Banner"></a>
-    </div>
-    <img class="menubtn" src="assets/icons/menu.png">
-    <div class="navmenu">
-        <ul>
-            <li><a href="#Profile">Home</a></li>
-            <li><a href="#Introduction">Introduction</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Services">Services</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contacts">Contacts</a></li>
-        </ul>
-    </div>
-    <script>
-        const menubutton = document.getElementsByClassName('menubtn')[0]
-        const navigatemenu = document.getElementsByClassName('navmenu')[0]
-        menubutton.addEventListener('click', () => {
-        navigatemenu.classList.toggle('active')
-        navigatemenu.classList.replace('inactive', 'active')
-        })
-        window.onclick = function(event){
-            if(!event.target.matches(".menubtn")){
-                navigatemenu.classList.replace('active', 'inactive')
+    <nav>
+        <div class="logo-title">
+            <a href="https://pitz1600.github.io/"><img class="logobanner" src="assets/icons/Logo-banner.png"
+                    alt="Logo Banner"></a>
+        </div>
+        <img class="menubtn" src="assets/icons/menu.png">
+        <div class="navmenu">
+            <ul>
+                <li><a href="#Profile">Home</a></li>
+                <li><a href="#Introduction">Introduction</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </div>
+        <script>
+            const menubutton = document.getElementsByClassName('menubtn')[0]
+            const navigatemenu = document.getElementsByClassName('navmenu')[0]
+            menubutton.addEventListener('click', () => {
+                navigatemenu.classList.toggle('active')
+                navigatemenu.classList.replace('inactive', 'active')
+            })
+            window.onclick = function (event) {
+                if (!event.target.matches(".menubtn")) {
+                    navigatemenu.classList.replace('active', 'inactive')
+                }
             }
-        }
-    </script>
-</nav>
+        </script>
+    </nav>
 
-<header id="Profile">
-    <p id="navtitles">About Me</p>
-    <div class="profiletext">
-        <h1 id="sectiontitle">Hi! I'm <b class="headtitle">PETER</b>!</h1>
-        <h2></h2>
+    <header id="Profile">
+        <p id="navtitles">About Me</p>
+        <div class="profiletext">
+            <h1 id="sectiontitle">Hi! I'm <b class="headtitle">PETER</b>!</h1>
+            <h2></h2>
+            <br><br>
+            <p class="indented">I've looked for opportunities to use and hone my talents through practical projects and
+                work experiences throughout my academic career.
+                I think that gaining practical experience is essential for career advancement.
+                Whether creating the assigned projects or working to improve myself, I give everything I have to make
+                sure that whatever I do is a true reflection of my commitment and dedication.
+            </p>
+        </div>
+        <div class="profilediv">
+            <img src="assets/images/Power_Picture.png" class="profilepic" alt="Profile Picture">
+        </div>
+    </header>
+
+    <section class="intro" id="Introduction">
+        <p id="navtitles">Introduction</p>
+        <div class="intropic">
+            <img src="assets/images/Formal-suit-with-outline.png" class="formalpic" alt="Formal Picture">
+        </div>
+        <div class="introtext">
+            <br>
+            <p class="indented">Hello there! It’s <span class="headtitle">Peter R. Pagasartonga</span>! As an IT
+                student, this individual embodies a responsible attitude and a strong work ethic that sets him apart
+                from his peers.
+                His commitment to his work is unwavering, as he consistently put in the extra time and effort required
+                to learn the complex concepts and technical skills needed to advance in his field of choice.
+            </p>
+            <br>
+            <p class="indented">This student understands that IT is a dynamic, ever-evolving industry, and he embraces
+                the challenge of continually expanding his knowledge and capabilities.
+                His responsible nature extends beyond the classroom or fieldwork as well - he is reliable, accountable,
+                and able to balance his work with other important aspects of his life.
+            </p>
+            <br>
+            <p class="indented">Professors and employers alike are sure to take notice of this individual's responsible
+                attitude and strong work ethic, qualities that will undoubtedly serve him well throughout his academic
+                and professional journey.</p>
+        </div>
+    </section>
+
+    <section class="skills" id="Skills">
+        <p id="navtitles">Skills</p>
+        <h1 class="maintitle" id="sectiontitle"><span class="headtitle">Skill</span> Levels</h1>
+        <div class="skills-box">
+            <div class="skills-content">
+                <h4>HTML & CSS</h4>
+                <div class="percent-bar">
+                    <div class="skill bar-html" style="width: 80%;">
+                        <p>80%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-content">
+                <h4>PHP</h4>
+                <div class="percent-bar">
+                    <div class="skill bar-php" style="width: 30%;">
+                        <p>30%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-content">
+                <h4>Python</h4>
+                <div class="percent-bar">
+                    <div class="skill bar-python" style="width: 40%;">
+                        <p>40%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-content">
+                <h4>Visual Basic</h4>
+                <div class="percent-bar">
+                    <div class="skill bar-vb" style="width: 60%;">
+                        <p>60%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-content">
+                <h4>Java</h4>
+                <div class="percent-bar">
+                    <div class="skill bar-java" style="width: 50%;">
+                        <p>50%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-content">
+                <h4>Flutter & Dart</h4>
+                <div class="percent-bar">
+                    <div class="skill bar-js" style="width: 30%;">
+                        <p>30%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="Services">
+        <p id="navtitles">Services</p>
+        <h1 class="maintitle" id="sectiontitle"><span class="headtitle">Services</span> Offered</h1>
+        <div class="services-box">
+            <div class="services-content">
+                <img class="icons" src="./assets/icons/web-development.png">
+                <h3>Web Development</h3>
+                <p>Create websites that are both practical and responsive in achieving your technological vision.</p>
+            </div>
+            <div class="services-content">
+                <img class="icons" src="./assets/icons/database-storage.png">
+                <h3>System Development</h3>
+                <p>Provide creative and effective system solutions that are suited to improve performance and user
+                    experience.</p>
+            </div>
+            <div class="services-content">
+                <img class="icons" src="./assets/icons/video-editing.png">
+                <h3>Video Editing</h3>
+                <p>Create captivating video material that captures the attention of your audience and effectively
+                    delivers your message.</p>
+            </div>
+            <div class="services-content">
+                <img class="icons" src="./assets/icons/wrench-customer-support.png">
+                <h3>Computer Servicing</h3>
+                <p>Providing a range of services related to computer maintenance and repair.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="Projects">
+        <p id="navtitles">Works</p>
+        <h1 class="maintitle" id="sectiontitle">Associated <span class="headtitle">Projects</span></h1>
+        <div class="project-box">
+            <div class="project-content">
+                <img class="project-img" src="./assets/images/Personal-Portfolio.png">
+                <div class="project-text">
+                    <h2>PERSONAL PORTFOLIO</h2>
+                    <p>A simple, eye-catching portfolio that highlights the IT skills and provides some personal
+                        information.</p>
+                </div>
+            </div>
+            <div class="project-content">
+                <img class="project-img" src="./assets/icons/Logo-icon.png">
+                <div class="project-text">
+                    <h2>TRAVEL GO</h2>
+                    <p>A mobile app that empowers travelers by providing a convenient and user-friendly platform to
+                        plan, book hotels & plane tickets, and manage their travel arrangements effectively. </p>
+                </div>
+            </div>
+        </div>
+        <h3>More <span class="headtitle">projects</span> coming soon...</h3>
+    </section>
+
+    <footer class="footer" id="Contacts">
+        <h6>Contacts</h6>
+        <div class="footer-icons">
+            <a id="fb" href="https://www.facebook.com/pitz16"><img src="./assets/icons/facebook.png"></a>
+            &nbsp;
+            <a id="instagram" href="https://www.instagram.com/pitz1600/"><img src="./assets/icons/instagram.png"></a>
+            &nbsp;
+            <a id="github" href="https://github.com/Pitz1600"><img src="./assets/icons/github.png"></a>
+            &nbsp;
+            <a id="telegram" href="https://t.me/Peter8816"><img src="./assets/icons/telegram.png"></a>
+        </div>
+        <br>
+        <a href="https://peterrp.carrd.co/" class="more">View More</a>
         <br><br>
-        <p class="indented">I've looked for opportunities to use and hone my talents through practical projects and work experiences throughout my academic career.
-            I think that gaining practical experience is essential for career advancement.
-            Whether creating the assigned projects or working to improve myself, I give everything I have to make sure that whatever I do is a true reflection of my commitment and dedication.
-            </p>
-    </div>
-    <div class="profilediv">
-        <img src="assets/images/Power_Picture.png" class="profilepic" alt="Profile Picture">
-    </div>
-</header>
-
-<section class="intro" id="Introduction">
-    <p id="navtitles">Introduction</p>
-    <div class="intropic">
-        <img src="assets/images/Formal-suit-with-outline.png" class="formalpic" alt="Formal Picture">
-    </div>
-    <div class="introtext">
-        <br>
-        <p class="indented">Hello there! It’s <span class="headtitle">Peter R. Pagasartonga</span>! As an IT student, this individual embodies a responsible attitude and a strong work ethic that sets him apart from his peers.
-            His commitment to his work is unwavering, as he consistently put in the extra time and effort required to learn the complex concepts and technical skills needed to advance in his field of choice.
-            </p>
-        <br>
-        <p class="indented">This student understands that IT is a dynamic, ever-evolving industry, and he embraces the challenge of continually expanding his knowledge and capabilities.
-            His responsible nature extends beyond the classroom or fieldwork as well - he is reliable, accountable, and able to balance his work with other important aspects of his life.
-            </p>
-        <br>
-        <p class="indented">Professors and employers alike are sure to take notice of this individual's responsible attitude and strong work ethic, qualities that will undoubtedly serve him well throughout his academic and professional journey.</p>
-    </div>
-</section>
-
-<section class="skills" id="Skills">
-    <p id="navtitles">Skills</p>
-    <h1 class="maintitle" id="sectiontitle"><span class="headtitle">Skill</span> Levels</h1>
-    <div class="skills-box">
-        <div class="skills-content">
-            <h4>HTML & CSS</h4> 
-            <div class="percent-bar"> 
-                <div class="skill bar-html" style="width: 80%;">
-                    <p>80%</p>
-                </div> 
-            </div>
-        </div>
-        <div class="skills-content">
-            <h4>PHP</h4> 
-            <div class="percent-bar"> 
-                <div class="skill bar-php" style="width: 30%;">
-                    <p>30%</p>
-                </div> 
-            </div>
-        </div>
-        <div class="skills-content">
-            <h4>Python</h4> 
-            <div class="percent-bar"> 
-                <div class="skill bar-python" style="width: 40%;">
-                    <p>40%</p>
-                </div> 
-            </div>
-        </div>
-        <div class="skills-content">
-            <h4>Visual Basic</h4> 
-            <div class="percent-bar"> 
-                <div class="skill bar-vb" style="width: 60%;">
-                    <p>60%</p>
-                </div> 
-            </div>
-        </div>
-        <div class="skills-content">
-            <h4>Java</h4> 
-            <div class="percent-bar"> 
-                <div class="skill bar-java" style="width: 50%;">
-                    <p>50%</p>
-                </div> 
-            </div>
-        </div><div class="skills-content">
-            <h4>Flutter & Dart</h4> 
-            <div class="percent-bar"> 
-                <div class="skill bar-js" style="width: 30%;">
-                    <p>30%</p>
-                </div> 
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="services" id="Services">
-    <p id="navtitles">Services</p>
-    <h1 class="maintitle" id="sectiontitle"><span class="headtitle">Services</span> Offered</h1>
-    <div class="services-box">
-        <div class="services-content">
-            <img class="icons" src="./assets/icons/web-development.png">
-            <h3>Web Development</h3>
-            <p>Create websites that are both practical and responsive in achieving your technological vision.</p>
-        </div>
-        <div class="services-content">
-            <img class="icons" src="./assets/icons/database-storage.png">
-            <h3>System Development</h3>
-            <p>Provide creative and effective system solutions that are suited to improve performance and user experience.</p>
-        </div>
-        <div class="services-content">
-            <img class="icons" src="./assets/icons/video-editing.png">
-            <h3>Video Editing</h3>
-            <p>Create captivating video material that captures the attention of your audience and effectively delivers your message.</p>
-        </div>
-        <div class="services-content">
-            <img class="icons" src="./assets/icons/wrench-customer-support.png">
-            <h3>Computer Servicing</h3>
-            <p>Providing a range of services related to computer maintenance and repair.</p>
-        </div>
-    </div>
-</section>
-
-<section class="projects" id="Projects">
-    <p id="navtitles">Works</p>
-    <h1 class="maintitle" id="sectiontitle">Associated <span class="headtitle">Projects</span></h1>
-    <div class="project-box">
-        <div class="project-content">
-            <img class="project-img" src="./assets/images/Personal-Portfolio.png">
-            <div class="project-text">
-                <h2>PERSONAL PORTFOLIO</h2>
-                <p>A simple, eye-catching portfolio that highlights the IT skills and provides some personal information.</p>
-            </div>
-        </div>
-        <div class="project-content">
-            <img class="project-img" src="./assets/icons/Logo-icon.png">
-            <div class="project-text">
-                <h2>TRAVEL GO</h2>
-                <p>A mobile app that empowers travelers by providing a convenient and user-friendly platform to plan, book hotels & plane tickets, and manage their travel arrangements effectively. </p>
-            </div>
-        </div>
-    </div>
-    <h3>More <span class="headtitle">projects</span> coming soon...</h3>
-</section>
-
-<footer class="footer" id="Contacts">
-    <h6>Contacts</h6>
-    <div class="footer-icons">
-        <a id="fb" href="https://www.facebook.com/pitz16"><img src="./assets/icons/facebook.png"></a>
-        &nbsp;
-        <a id="instagram" href="https://www.instagram.com/pitz1600/"><img src="./assets/icons/instagram.png"></a>
-        &nbsp;
-        <a id="github" href="https://github.com/Pitz1600"><img src="./assets/icons/github.png"></a>
-        &nbsp;
-        <a id="telegram" href="https://t.me/Peter8816"><img src="./assets/icons/telegram.png"></a>
-    </div>
-    <br>
-    <a href="https://peterrp.carrd.co/" class="more">View More</a>
-    <br><br>
-    <p>Copyright &copy; September 2024 Peter Pagasartonga. <br>
-        All rights reserved.</p>
-</footer>
+        <p>Copyright &copy; September 2024 Peter Pagasartonga. <br>
+            All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
