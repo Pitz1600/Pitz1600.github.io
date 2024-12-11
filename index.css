@@ -396,6 +396,7 @@ header h2 {
 }
 
 .project-content {
+  height: 300px;
   width: 300px;
   position: relative;
   border-radius: 30px;
