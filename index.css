@@ -464,7 +464,7 @@ header h2 {
   background-color: var(--main-text);
 }
 
-.footer h6 {
+.footer h1 {
   font-family: var(--open-sans);
   color: var(--bg-color);
   font-size: 30px;
