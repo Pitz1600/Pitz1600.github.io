@@ -475,14 +475,15 @@ header h2 {
 }
 
 .footer-icons img {
-  width: 24px;
+  width: 40px;
   transition: 0.5s;
   text-decoration: none;
   border-radius: 50%;
 }
 
 .footer-icons img:hover {
-  width: 48px;
+  transform: scale(2);
+  margin: 0 10px;
 }
 
 .more {
